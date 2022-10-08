@@ -17,7 +17,7 @@
               <a class="btn btn-info" aria-current="page" href="inicio">Home</a>
               <a class="nav-link" aria-current="page" href="tabla">Tabla</a>
               <a class="btn btn-success" aria-current="page"  href="registro">Registrarse</a>
-              <a class="nav-link" aria-current="page" href="logearse">Logearse</a>
+              <a class="nav-link" aria-current="page" href="login">Logearse</a>
               
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

@@ -1,7 +1,7 @@
 <?php
 
 require_once './app/controllers/carinfo.controller.php';
-require_once './app/controllers/carShow.controller.php';
+require_once './app/controllers/user.controller.php';
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
@@ -18,6 +18,18 @@ $CarController = new CarController();
 
 
 switch ($params[0]) {
+    case 'login':
+        $userController = new UserController();
+        $userController->showFormLogin();
+        break;
+    case 'validate':
+        $userController = new UserController();
+        $userController->validateUser();
+        break;
+    case 'logout':
+        $userController = new UserController();
+        $userController->logout();
+        break;
     case 'inicio':
         $CarController->showCarCategory();   //aca va las categorias en el homes
         break;

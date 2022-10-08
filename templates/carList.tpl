@@ -18,6 +18,7 @@
   </thead>
   <tbody>
   {foreach from=$cars item=$car}
+
     <tr>
       <td>{$car->nombre}</td>
       <td>{$car->fecha}</td>

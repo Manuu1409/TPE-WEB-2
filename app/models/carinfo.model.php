@@ -26,7 +26,7 @@
 
     function getCategories(){
 
-      $query = $this->db->prepare("SELECT * FROM categoria");
+      $query = $this->db->prepare("SELECT * FROM categorias");
       $query->execute();
 
       $categories = $query->fetchAll(PDO::FETCH_OBJ);
