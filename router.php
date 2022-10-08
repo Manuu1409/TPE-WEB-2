@@ -1,10 +1,11 @@
 <?php
 
 require_once './app/controllers/carinfo.controller.php';
+require_once './app/controllers/carShow.controller.php';
 
 define('BASE_URL', '//'.$_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']).'/');
 
-$action = 'inicio'; // acción por defecto
+$action = 'tabla'; // acción por defecto
 if (!empty($_GET['action'])) {
     $action = $_GET['action'];
 }
@@ -18,21 +19,24 @@ $CarController = new CarController();
 
 switch ($params[0]) {
     case 'inicio':
-        $CarController->showHome();
+        $CarController->showCarCategory();   //aca va las categorias en el homes
+        break;
+    case 'lista':
+        $CarController->showCarList();  // al hacer click en categorias me muestra la lista , todavia no hecho
         break;
     case 'registro':
-        $CarController->showRegister();
+        $CarController->showRegister();   //esto es el registro
         break;
     case 'tabla':
-        $CarController->showCars();
+        $CarController->showCars();   //aca me muestra la tabla para poner o borrar autos
         break;
     case 'add':
-        $CarController->addCar();
+        $CarController->addCar();   // me añade un auto
         break;
     case 'delete':
             // obtengo el parametro de la acción
         $id = $params[1];
-        $CarController->deleteCar($id);
+        $CarController->deleteCar($id);   //me borra el auto
         break;
         default:
         echo('404 Page not found');

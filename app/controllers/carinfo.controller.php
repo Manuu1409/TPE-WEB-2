@@ -11,15 +11,26 @@ class CarController {
         $this->model = new CarsModel();
         $this->view = new CarsView();
     }
+    
 
     public function showCars() {
         $autos = $this->model->getCars();
-        $this->view->showCars($autos);
+        $categorias = $this->model->getCategories();
+        $this->view->showCars($autos, $categorias);   
+        
     }
 
-    public function showHome() {
+    public function showCarCategory() {
+        $categoria = $this->model->getCategories();
+        $this->view->showCarsCategory($categoria);
+
+    }
+    
+
+    public function showCarList() {
         $autos = $this->model->getCars();
-        $this->view->showCarsHome($autos);
+        $this->view->showCarsList($autos);
+       
     }
 
     public function showRegister() {
@@ -27,27 +38,30 @@ class CarController {
   
     }
 
-    public function addCar() {
+
+
+    public function addCar() {       //Se queda aca 
          
         $name = $_POST['name'];   // validar entrada de datos
         $date = $_POST['date'];
         $colour = $_POST['colour'];
         $priority = $_POST['priority'];
+        $category = $_POST['categoria'];
         
-        $id = $this->model->insertCar($name, $date, $colour, $priority);
+         $this->model->insertCar($name, $date, $colour, $priority, $category);
         
         header("Location: " . BASE_URL); 
     }
 
 
-    public function deleteCar($id) {
+    public function deleteCar($id) {    //Se queda aca
         $this->model->deleteCarById($id);
         header("Location: " . BASE_URL);
     }
 
-    public function EditCar() {
-        $query =  $this->db->prepare("UPDATE autos SET nombre = ?, fecha = ?, color = ?");
-    }
+    //public function EditCar() {
+      //  $query =  $this->db->prepare("UPDATE autos SET nombre = ?, fecha = ?, color = ?");
+    //}
 
 
    

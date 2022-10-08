@@ -11,17 +11,12 @@
 
   function getCars () {
 
-  // Me conecto a la base de datos , abrir conexion
+  //Agarro la tabla autos
 
-  $db = new PDO('mysql:host=localhost;'.'dbname=db_ford;charset=utf8' , 'root', '');
-
-
-  //Agarro la tabla car_information
-
-  $query = $db->prepare('SELECT * FROM autos');
+  $query = $this->db->prepare('SELECT * FROM autos');
   $query->execute();
 
-  // Obtengo los datos de car_information como un arreglo
+  // Obtengo los datos de autos como un arreglo
 
   $cars = $query->fetchAll(PDO::FETCH_OBJ);
 
@@ -29,9 +24,21 @@
 
     }
 
-    public function insertCar($name, $date, $colour, $priority) {
-      $query = $this->db->prepare("INSERT INTO autos (nombre, fecha, color, prioridad ) VALUES (?, ? ,?, ?)");
-      $query->execute([$name, $date, $colour, $priority]);
+    function getCategories(){
+
+      $query = $this->db->prepare("SELECT * FROM categoria");
+      $query->execute();
+
+      $categories = $query->fetchAll(PDO::FETCH_OBJ);
+
+      return $categories;
+
+  }
+  
+
+    public function insertCar($name, $date, $colour, $priority, $category) {
+      $query = $this->db->prepare("INSERT INTO `autos` (`id`, `nombre`, `fecha`, `color`, `prioridad`, `id_categoria_fk`) VALUES (?, ? , ?, ?, ?, ?);");
+      $query->execute([NULL, $name, $date, $colour, $priority, $category]);
 
       return $this->db->lastInsertId();
   }

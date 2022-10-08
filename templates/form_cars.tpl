@@ -33,6 +33,17 @@
                 </select>
             </div>
         </div>
+
+        <div class="col-3">
+            <div class="form-group">
+                <label>Categoria</label>
+                <select name="categoria" class="form-control">
+                {foreach from=$categorias item=$categoria}
+                    <option value={$categoria->id}>{$categoria->nombre}</option>
+                {/foreach}
+                </select>
+            </div>
+        </div>
     
     <button type="submit" class="btn btn-success">Enviar</button>
 </form>

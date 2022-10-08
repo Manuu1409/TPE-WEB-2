@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-05 18:30:48
+/* Smarty version 4.2.1, created on 2022-10-08 19:28:03
   from 'C:\xampp\htdocs\TPE_WEB_2\templates\carList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_633db13863e107_34153938',
+  'unifunc' => 'content_6341b323c09387_81296325',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4234555ffab4bd3197639bdd384f0680e1d7b712' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE_WEB_2\\templates\\carList.tpl',
-      1 => 1664987444,
+      1 => 1665248635,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:form_cars.tpl' => 1,
   ),
 ),false)) {
-function content_633db13863e107_34153938 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6341b323c09387_81296325 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
