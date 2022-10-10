@@ -34,7 +34,7 @@ switch ($params[0]) {
         $CarController->showCarCategory();   //aca va las categorias en el homes
         break;
     case 'lista':
-        $CarController->showCarList();  // al hacer click en categorias me muestra la lista , todavia no hecho
+        $CarController->Sortbyid($params[1]);  // al hacer click en categorias me muestra la lista , todavia no hecho
         break;
     case 'registro':
         $CarController->showRegister();   //esto es el registro
@@ -45,6 +45,12 @@ switch ($params[0]) {
     case 'add':
         $CarController->addCar();   // me añade un auto
         break;
+        case 'editar':
+        $CarController->editCategory($params[1]);   
+        break;
+        case 'editarform':
+            $CarController->editForm($params[1]);   
+            break;
     case 'delete':
             // obtengo el parametro de la acción
         $id = $params[1];

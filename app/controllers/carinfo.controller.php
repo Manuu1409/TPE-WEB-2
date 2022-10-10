@@ -2,6 +2,7 @@
 
 require_once './app/models/carinfo.model.php';
 require_once './app/views/carinfo.view.php';
+//require_once './app/helpers/auth.helper.php';
 
 class CarController {
     private $model;
@@ -10,6 +11,10 @@ class CarController {
     public function __construct() {
         $this->model = new CarsModel();
         $this->view = new CarsView();
+
+        // barrera de seguridad
+      //  $authHelper = new AuthHelper();
+        //$authHelper->checkLoggedIn();
     }
     
 
@@ -19,6 +24,7 @@ class CarController {
         $this->view->showCars($autos, $categorias);   
         
     }
+
 
     public function showCarCategory() {
         $categoria = $this->model->getCategories();
@@ -33,11 +39,33 @@ class CarController {
        
     }
 
+    
+
     public function showRegister() {
         $this->view->showUserRegister();
   
     }
 
+    public function Sortbyid ($id) {
+        $products = $this->model->Sortbyid($id);   // traigo los autos ordenados y los ordeno
+        $this->view->showCarsList($products);
+        
+    }
+
+    public function editCategory ($id) {
+        $name = $_POST['name'];   // validar entrada de datos
+        $description = $_POST['description'];
+
+       $this->model->editCategory($id, $name, $description);
+       
+       header("Location: " . BASE_URL);
+
+    }
+
+    public function editForm ($id) {
+        $this->view->showEditForm($id);
+
+    }
 
 
     public function addCar() {       //Se queda aca 
@@ -58,13 +86,6 @@ class CarController {
         $this->model->deleteCarById($id);
         header("Location: " . BASE_URL);
     }
-
-    //public function EditCar() {
-      //  $query =  $this->db->prepare("UPDATE autos SET nombre = ?, fecha = ?, color = ?");
-    //}
-
-
-   
 
     
 }
