@@ -1,5 +1,7 @@
 {include file="header.tpl"}
 
+<h1>Editar auto</h1>
+
 <form action="editarauto/{$auto}" method="POST" class="my-4">
     <div class="row">
         <div class="col-3">

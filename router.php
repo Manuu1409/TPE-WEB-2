@@ -40,23 +40,23 @@ switch ($params[0]) {
         $CarController->showRegister();   //esto es el registro
         break;
     case 'tabla':
-        $CarController->showCars();   //aca me muestra la tabla para poner o borrar autos
+        $CarController->showCars();   //aca me muestra la tabla 
         break;
     case 'add':
         $CarController->addCar();   // me añade un auto
         break;
-        case 'editar':
+    case 'editar':
         $CarController->editCategory($params[1]);   
         break;
-        case 'editarcategoria':
+     case 'categoria':
         $CarController->editFormCategory($params[1]);   
             break;
-        case 'editarauto':
+    case 'editarauto':
              $CarController->editCar($params[1]);   
-             break;
-        case 'formauto':
+        break;
+    case 'formauto':
             $CarController->editFormCar($params[1]);   
-             break;
+        break;
        // case 'borrarcategoria':
           //  $id = $params[1];
           //  $CarController->deleteCategorybyid($id);   

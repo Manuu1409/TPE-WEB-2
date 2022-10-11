@@ -31,7 +31,7 @@ class CarController {
 
     public function showCarCategory() {
         $categoria = $this->model->getCategories();
-        $this->view->showCarsCategory($categoria);
+        $this->view->showCategory($categoria);
 
     }
 

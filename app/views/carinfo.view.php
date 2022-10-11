@@ -20,7 +20,7 @@ class CarsView {
     }
 
 
-    function showCarsCategory ($categorias) {   //esto es el home
+    function showCategory ($categorias) {   //esto es el home
         $this->smarty->assign('count',count($categorias));
         $this->smarty->assign('categorias', $categorias);   //variables al smarty
 

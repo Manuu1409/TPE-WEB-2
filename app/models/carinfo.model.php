@@ -51,7 +51,7 @@
   }
 
   function editCar($id, $name, $date, $colour, $priority) {
-    $query = $this->db->prepare("UPDATE `autos` SET `nombre` = ?, `fecha` = ?, `color` = ?, `prioridad` = ?, WHERE `autos`.`id` = ?;");
+    $query = $this->db->prepare("UPDATE `autos` SET `nombre` = ?, `fecha` = ?, `color` = ?, `prioridad` = ? WHERE `autos`.`id` = ?;");
     $query->execute([$name, $date, $colour, $priority, $id]);
 
   }
