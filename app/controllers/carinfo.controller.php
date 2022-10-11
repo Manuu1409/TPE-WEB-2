@@ -2,7 +2,7 @@
 
 require_once './app/models/carinfo.model.php';
 require_once './app/views/carinfo.view.php';
-//require_once './app/helpers/auth.helper.php';
+require_once './app/helpers/auth.helper.php';
 
 class CarController {
     private $model;
@@ -13,32 +13,9 @@ class CarController {
         $this->view = new CarsView();
 
         // barrera de seguridad
-      //  $authHelper = new AuthHelper();
-        //$authHelper->checkLoggedIn();
+        $authHelper = new AuthHelper();
+        $authHelper->checkLoggedIn();
     }
-    
-
-    public function showCars() {
-        $autos = $this->model->getCars();
-        $categorias = $this->model->getCategories();
-        $this->view->showCars($autos, $categorias);   
-        
-    }
-
-
-    public function showCarCategory() {
-        $categoria = $this->model->getCategories();
-        $this->view->showCarsCategory($categoria);
-
-    }
-    
-
-    public function showCarList() {
-        $autos = $this->model->getCars();
-        $this->view->showCarsList($autos);
-       
-    }
-
     
 
     public function showRegister() {
@@ -52,6 +29,17 @@ class CarController {
         
     }
 
+    public function showCarCategory() {
+        $categoria = $this->model->getCategories();
+        $this->view->showCarsCategory($categoria);
+
+    }
+
+    public function editFormCategory ($id) {
+        $this->view->showEditFormCategory($id);
+
+    }
+
     public function editCategory ($id) {
         $name = $_POST['name'];   // validar entrada de datos
         $description = $_POST['description'];
@@ -62,9 +50,25 @@ class CarController {
 
     }
 
-    public function editForm ($id) {
-        $this->view->showEditForm($id);
+   // public function deleteCategorybyid ($id) {
+      //  $this->model->deleteCategoryByid($id);
+       // header("Location: " . BASE_URL);
 
+
+   // }
+
+    public function showCars() {
+        $autos = $this->model->getCars();
+        $categorias = $this->model->getCategories();
+        $this->view->showCars($autos, $categorias);   
+        
+    }
+
+
+    public function showCarList() {
+        $autos = $this->model->getCars();
+        $this->view->showCarsList($autos);
+       
     }
 
 
@@ -81,10 +85,27 @@ class CarController {
         header("Location: " . BASE_URL); 
     }
 
-
+    
     public function deleteCar($id) {    //Se queda aca
         $this->model->deleteCarById($id);
         header("Location: " . BASE_URL);
+    }
+
+    public function editCar ($id) {
+        $name = $_POST['name'];   
+        $date = $_POST['date'];
+        $colour = $_POST['colour'];
+        $priority = $_POST['priority'];
+
+        $this->model->editCar($id, $name, $date, $colour, $priority);
+
+        header("Location: " . BASE_URL);
+
+    }
+
+    public function editFormCar ($id) {
+        $this->view->showEditFormCar($id);
+
     }
 
     

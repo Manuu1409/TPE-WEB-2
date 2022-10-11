@@ -22,3 +22,5 @@
   </tbody>
   
 </table>
+
+<p class="mt-3"><b>Mostrando {$count} autos</b></p>

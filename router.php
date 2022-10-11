@@ -48,9 +48,19 @@ switch ($params[0]) {
         case 'editar':
         $CarController->editCategory($params[1]);   
         break;
-        case 'editarform':
-            $CarController->editForm($params[1]);   
+        case 'editarcategoria':
+        $CarController->editFormCategory($params[1]);   
             break;
+        case 'editarauto':
+             $CarController->editCar($params[1]);   
+             break;
+        case 'formauto':
+            $CarController->editFormCar($params[1]);   
+             break;
+       // case 'borrarcategoria':
+          //  $id = $params[1];
+          //  $CarController->deleteCategorybyid($id);   
+          //  break;
     case 'delete':
             // obtengo el parametro de la acción
         $id = $params[1];
