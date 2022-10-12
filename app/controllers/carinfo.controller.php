@@ -2,7 +2,7 @@
 
 require_once './app/models/carinfo.model.php';
 require_once './app/views/carinfo.view.php';
-require_once './app/helpers/auth.helper.php';
+//require_once './app/helpers/auth.helper.php';
 
 class CarController {
     private $model;
@@ -13,14 +13,8 @@ class CarController {
         $this->view = new CarsView();
 
         // barrera de seguridad
-        $authHelper = new AuthHelper();
-        $authHelper->checkLoggedIn();
-    }
-    
-
-    public function showRegister() {
-        $this->view->showUserRegister();
-  
+      //  $authHelper = new AuthHelper();
+       // $authHelper->checkLoggedIn();
     }
 
     public function Sortbyid ($id) {
@@ -29,11 +23,15 @@ class CarController {
         
     }
 
-    public function showCarCategory() {
+    public function showCategoryList() {
         $categoria = $this->model->getCategories();
         $this->view->showCategory($categoria);
 
     }
+
+    public function showFormCategory() {
+        $this->view->showFormCategory();
+    } 
 
     public function editFormCategory ($id) {
         $this->view->showEditFormCategory($id);
@@ -64,13 +62,22 @@ class CarController {
         
     }
 
-
     public function showCarList() {
         $autos = $this->model->getCars();
         $this->view->showCarsList($autos);
        
     }
 
+    public function addCategory () {
+        
+        $name = $_POST['name'];  
+        $description = $_POST['description'];
+
+        $this->model->insertCategory($name, $description);
+
+        header("Location: " . BASE_URL);
+
+    }
 
     public function addCar() {       //Se queda aca 
          
@@ -80,14 +87,14 @@ class CarController {
         $priority = $_POST['priority'];
         $category = $_POST['categoria'];
         
-         $this->model->insertCar($name, $date, $colour, $priority, $category);
+        $this->model->insertCar($name, $date, $colour, $priority, $category);
         
         header("Location: " . BASE_URL); 
     }
-
     
     public function deleteCar($id) {    //Se queda aca
         $this->model->deleteCarById($id);
+
         header("Location: " . BASE_URL);
     }
 
@@ -107,6 +114,4 @@ class CarController {
         $this->view->showEditFormCar($id);
 
     }
-
-    
 }

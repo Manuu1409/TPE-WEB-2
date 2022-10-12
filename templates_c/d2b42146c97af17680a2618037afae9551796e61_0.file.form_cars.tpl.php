@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-11 22:39:41
+/* Smarty version 4.2.1, created on 2022-10-12 20:43:31
   from 'C:\xampp\htdocs\TPE_WEB_2\templates\form_cars.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6345d48d307644_00655285',
+  'unifunc' => 'content_63470ad3bd0a96_06852078',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd2b42146c97af17680a2618037afae9551796e61' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE_WEB_2\\templates\\form_cars.tpl',
-      1 => 1665520780,
+      1 => 1665600208,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6345d48d307644_00655285 (Smarty_Internal_Template $_smarty_tpl) {
-?> 
+function content_63470ad3bd0a96_06852078 (Smarty_Internal_Template $_smarty_tpl) {
+?> <h1>Tabla de autos </h1>
         
 <!-- formulario de alta de tarea -->
-<form action="add" method="POST" class="my-4">
+<form action="agregarauto" method="POST" class="my-4">
     <div class="row">
         <div class="col-3">
             <div class="form-group">

@@ -15,8 +15,8 @@
         <nav class="navbar" style="background-color: #e3f2fd;>
             <div class="container-fluid">
               <a class="btn btn-info" aria-current="page" href="inicio">Home</a>
-              <a class="nav-link" aria-current="page" href="tabla">Tabla</a>
-              <a class="btn btn-success" aria-current="page"  href="registro">Registrarse</a>
+              <a class="nav-link" aria-current="page" href="tablaAutos">Tabla autos</a>
+              <a class="btn btn-success" aria-current="page"  href="tablaCategoria">Tabla categoria</a>
               <a class="nav-link" aria-current="page" href="login">Logearse</a>
               
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

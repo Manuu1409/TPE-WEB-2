@@ -1,9 +1,6 @@
 {include file="header.tpl"}
 
-<h1>Cambiar categoria </h1>
-
-
-<form action="editarcategoria/{$categoria}" method="POST">
+<form action="agregarcategoria" method="POST">
     <div class="row">
         <div class="col-3">
             <div class="form-group">

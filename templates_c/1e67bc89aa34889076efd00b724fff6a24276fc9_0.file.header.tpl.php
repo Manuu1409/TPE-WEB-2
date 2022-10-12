@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-10 21:04:48
+/* Smarty version 4.2.1, created on 2022-10-12 20:48:32
   from 'C:\xampp\htdocs\TPE_WEB_2\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63446cd0f1e790_80056822',
+  'unifunc' => 'content_63470c004c0c32_04915753',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1e67bc89aa34889076efd00b724fff6a24276fc9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE_WEB_2\\templates\\header.tpl',
-      1 => 1665428686,
+      1 => 1665600510,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63446cd0f1e790_80056822 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63470c004c0c32_04915753 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,8 +39,8 @@ function content_63446cd0f1e790_80056822 (Smarty_Internal_Template $_smarty_tpl)
         <nav class="navbar" style="background-color: #e3f2fd;>
             <div class="container-fluid">
               <a class="btn btn-info" aria-current="page" href="inicio">Home</a>
-              <a class="nav-link" aria-current="page" href="tabla">Tabla</a>
-              <a class="btn btn-success" aria-current="page"  href="registro">Registrarse</a>
+              <a class="nav-link" aria-current="page" href="tablaAutos">Tabla autos</a>
+              <a class="btn btn-success" aria-current="page"  href="tablaCategoria">Tabla categoria</a>
               <a class="nav-link" aria-current="page" href="login">Logearse</a>
               
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

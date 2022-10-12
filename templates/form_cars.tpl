@@ -1,7 +1,7 @@
- 
+ <h1>Tabla de autos </h1>
         
 <!-- formulario de alta de tarea -->
-<form action="add" method="POST" class="my-4">
+<form action="agregarauto" method="POST" class="my-4">
     <div class="row">
         <div class="col-3">
             <div class="form-group">

@@ -24,8 +24,8 @@
       <td>{$car->fecha}</td>
       <td>{$car->color}</td>
       <td>{$car->prioridad}</td>
-      <td> <a href='delete/{$car->id}' type='button' class='btn btn-danger'>Borrar</a></td>  
-      <td> <a href='formauto/{$car->id}' type='button' class="btn btn-warning">Editar</a></td>  
+      <td> <a href='borrarauto/{$car->id}' type='button' class='btn btn-danger'>Borrar</a></td>  
+      <td> <a href='auto/{$car->id}' type='button' class="btn btn-warning">Editar</a></td>  
     </tr>
   {/foreach}
   </tbody>
