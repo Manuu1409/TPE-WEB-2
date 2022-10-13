@@ -40,34 +40,6 @@ class CarController {
 
     }
 
-    public function addCategory () {
-        
-        $name = $_POST['name'];  
-        $description = $_POST['description'];
-
-        $this->model->insertCategory($name, $description);
-
-        header("Location: " . BASE_URL);
-
-    }
-
-    public function editCategory ($id) {
-        $name = $_POST['name'];   // validar entrada de datos
-        $description = $_POST['description'];
-
-       $this->model->editCategory($id, $name, $description);
-       
-       header("Location: " . BASE_URL);
-
-    }
-
-   // public function deleteCategorybyid ($id) {
-      //  $this->model->deleteCategoryByid($id);
-       // header("Location: " . BASE_URL);
-
-
-   // }
-
     public function showCars() {
         $autos = $this->model->getCars();
         $categorias = $this->model->getCategories();
@@ -81,39 +53,9 @@ class CarController {
        
     }
 
-    public function addCar() {       //Se queda aca 
-         
-        $name = $_POST['name'];   // validar entrada de datos
-        $date = $_POST['date'];
-        $colour = $_POST['colour'];
-        $priority = $_POST['priority'];
-        $category = $_POST['categoria'];
-        
-        $this->model->insertCar($name, $date, $colour, $priority, $category);
-        
-        header("Location: " . BASE_URL); 
-    }
-    
-    public function deleteCar($id) {    //Se queda aca
-        $this->model->deleteCarById($id);
-
-        header("Location: " . BASE_URL);
-    }
-
-    public function editCar ($id) {
-        $name = $_POST['name'];   
-        $date = $_POST['date'];
-        $colour = $_POST['colour'];
-        $priority = $_POST['priority'];
-
-        $this->model->editCar($id, $name, $date, $colour, $priority);
-
-        header("Location: " . BASE_URL);
-
-    }
-
     public function editFormCar ($id) {
         $this->view->showEditFormCar($id);
 
     }
+    
 }

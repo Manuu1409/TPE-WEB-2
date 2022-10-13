@@ -17,7 +17,7 @@ class CarsView {
         
        $this->smarty->display('carList.tpl');  //muestro el template
 
-   }
+    }
 
     function showCategory ($categorias) {   //esto es el home
        $this->smarty->assign('count',count($categorias));
