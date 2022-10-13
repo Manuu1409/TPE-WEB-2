@@ -34,7 +34,7 @@ class CarsView {
 
     }
 
-    function showFormCategory () {
+    function showFormCategory () {   //form para agregar categoria
         $this->smarty->display('form_Category.tpl');
     }
 

@@ -1,5 +1,7 @@
 {include file="header.tpl"}
 
+<h1>Agregar categoria </h1>
+
 <form action="agregarcategoria" method="POST">
     <div class="row">
         <div class="col-3">

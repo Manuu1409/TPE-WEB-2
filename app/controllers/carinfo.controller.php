@@ -7,6 +7,7 @@ require_once './app/views/carinfo.view.php';
 class CarController {
     private $model;
     private $view;
+   // private $authHelper;
 
     public function __construct() {
         $this->model = new CarsModel();
@@ -26,6 +27,7 @@ class CarController {
     public function showCategoryList() {
         $categoria = $this->model->getCategories();
         $this->view->showCategory($categoria);
+        
 
     }
 
@@ -35,6 +37,17 @@ class CarController {
 
     public function editFormCategory ($id) {
         $this->view->showEditFormCategory($id);
+
+    }
+
+    public function addCategory () {
+        
+        $name = $_POST['name'];  
+        $description = $_POST['description'];
+
+        $this->model->insertCategory($name, $description);
+
+        header("Location: " . BASE_URL);
 
     }
 
@@ -66,17 +79,6 @@ class CarController {
         $autos = $this->model->getCars();
         $this->view->showCarsList($autos);
        
-    }
-
-    public function addCategory () {
-        
-        $name = $_POST['name'];  
-        $description = $_POST['description'];
-
-        $this->model->insertCategory($name, $description);
-
-        header("Location: " . BASE_URL);
-
     }
 
     public function addCar() {       //Se queda aca 
