@@ -21,8 +21,10 @@
        <td>{$car->fecha}</td>
        <td>{$car->color}</td>
        <td>{$car->prioridad}</td>
+       {if (isset($smarty.session.IS_LOGGED))}
        <td> <a href='borrarauto/{$car->id}' type='button' class='btn btn-danger'>Borrar</a></td>  
        <td> <a href='auto/{$car->id}' type='button' class="btn btn-warning">Editar</a></td>  
+       {/if}
      </tr>
    {/foreach}
   </tbody>

@@ -9,8 +9,10 @@ class UserController {
 
 
 function __construct(){
+    session_start();  // inicie sesion pero que no verifique
     $this->model = new UserModel();
     $this->view = new UserView();
+    
   }
 
   public function showFormLogin() {

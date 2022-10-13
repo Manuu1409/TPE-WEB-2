@@ -17,7 +17,12 @@
               <a class="btn btn-info" aria-current="page" href="inicio">Home</a>
               <a class="nav-link" aria-current="page" href="tablaAutos">Tabla autos</a>
               <a class="btn btn-success" aria-current="page"  href="tablaCategoria">Tabla categoria</a>
-              <a class="nav-link" aria-current="page" href="login">Logearse</a>
+              {if (!isset($smarty.session.IS_LOGGED))}  {* si no esta logueado *}.
+              <a class="nav-link" aria-current="page" href="login">Log in</a>
+              {else}
+                <a class="nav-link" aria-current="page" href="logout">Logout</a>
+                
+              {/if}
               
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

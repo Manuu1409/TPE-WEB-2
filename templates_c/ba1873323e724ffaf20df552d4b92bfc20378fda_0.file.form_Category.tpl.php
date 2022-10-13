@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-12 21:16:13
+/* Smarty version 4.2.1, created on 2022-10-13 22:26:51
   from 'C:\xampp\htdocs\TPE_WEB_2\templates\form_Category.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6347127da495d7_28226555',
+  'unifunc' => 'content_6348748b443b31_89873884',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ba1873323e724ffaf20df552d4b92bfc20378fda' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE_WEB_2\\templates\\form_Category.tpl',
-      1 => 1665602172,
+      1 => 1665681031,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_6347127da495d7_28226555 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6348748b443b31_89873884 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -34,12 +34,13 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
                 <label> Nombre categoria</label>
                 <input name="name" type="text" class="form-control">
             </div>
+
             <div>
                 <label>Descripcion</label>
                 <input name="description" type="text" class="form-control">
             </div>
         </div>
     </div>
-        <button type="submit" class="btn btn-success">Enviar</button>
+    <button type="submit" class="btn btn-success">Enviar</button>
 </form><?php }
 }

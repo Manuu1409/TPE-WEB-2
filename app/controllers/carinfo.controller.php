@@ -2,20 +2,19 @@
 
 require_once './app/models/carinfo.model.php';
 require_once './app/views/carinfo.view.php';
-//require_once './app/helpers/auth.helper.php';
+require_once './app/helpers/auth.helper.php';
 
 class CarController {
     private $model;
     private $view;
-   // private $authHelper;
+    
 
     public function __construct() {
         $this->model = new CarsModel();
         $this->view = new CarsView();
 
         // barrera de seguridad
-      //  $authHelper = new AuthHelper();
-       // $authHelper->checkLoggedIn();
+    
     }
 
     public function Sortbyid ($id) {
@@ -40,7 +39,7 @@ class CarController {
 
     }
 
-   // <-------------------------------------------------------------------------------------------------------> //
+   // <------------------------------------------------------------------------------------------------------->  cascade me elima categoria y todos los items y restric no//  
 
     public function showCars() {
         $autos = $this->model->getCars();

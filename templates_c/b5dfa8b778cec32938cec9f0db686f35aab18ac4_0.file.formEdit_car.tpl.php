@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 19:16:31
+/* Smarty version 4.2.1, created on 2022-10-13 23:10:14
   from 'C:\xampp\htdocs\TPE_WEB_2\templates\formEdit_car.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634847ef215b36_74407053',
+  'unifunc' => 'content_63487eb6bc48f5_15348909',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b5dfa8b778cec32938cec9f0db686f35aab18ac4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE_WEB_2\\templates\\formEdit_car.tpl',
-      1 => 1665681389,
+      1 => 1665681401,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_634847ef215b36_74407053 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63487eb6bc48f5_15348909 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -64,7 +64,6 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
             </div>
 
         </div>
-    
     <button type="submit" class="btn btn-success">Enviar</button>
 </form><?php }
 }

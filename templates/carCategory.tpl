@@ -9,8 +9,10 @@
      <h3 class="card-title">{$categoria->nombre}</h3>
      <p class="text-center">{$categoria->descripcion}</p>
      <a  type="button" class="btn btn-success" href="lista/{$categoria->id}">Ver mas</a>
+     {if (isset($smarty.session.IS_LOGGED))}
      <a  type='button' class="btn btn-warning" href="categoria/{$categoria->id}">Editar</a>
-     {*<a  class="btn btn-info" aria-current="page" href="borrarcategoria/{$categoria->id}">Borrar</a>*}
+     <a  class="btn btn-info" aria-current="page" href="borrarcategoria/{$categoria->id}">Borrar</a>
+     {{/if}}
    </div>
  {/foreach}
 </div>
