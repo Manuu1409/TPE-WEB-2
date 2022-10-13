@@ -32,6 +32,8 @@ class actionController {
 
     }
 
+    // <-------------------------------------------------------------------------------------------------------> //
+
     public function addCar() {       //Se queda aca 
          
       $name = $_POST['name'];   // validar entrada de datos

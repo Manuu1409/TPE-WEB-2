@@ -2,7 +2,6 @@
 
 <h1>Cambiar categoria </h1>
 
-
 <form action="editarcategoria/{$categoria}" method="POST">
     <div class="row">
         <div class="col-3">
@@ -16,5 +15,5 @@
             </div>
         </div>
     </div>
-        <button type="submit" class="btn btn-success">Enviar</button>
+    <button type="submit" class="btn btn-success">Enviar</button>
 </form>

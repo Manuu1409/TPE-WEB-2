@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-12 01:01:33
+/* Smarty version 4.2.1, created on 2022-10-13 19:16:31
   from 'C:\xampp\htdocs\TPE_WEB_2\templates\formEdit_car.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6345f5cdd7cb58_74052867',
+  'unifunc' => 'content_634847ef215b36_74407053',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b5dfa8b778cec32938cec9f0db686f35aab18ac4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE_WEB_2\\templates\\formEdit_car.tpl',
-      1 => 1665529290,
+      1 => 1665681389,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
   ),
 ),false)) {
-function content_6345f5cdd7cb58_74052867 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634847ef215b36_74407053 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -30,18 +30,21 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 <form action="editarauto/<?php echo $_smarty_tpl->tpl_vars['auto']->value;?>
 " method="POST" class="my-4">
     <div class="row">
+
         <div class="col-3">
             <div class="form-group">
                 <label>Nombre del auto</label>
                 <input name="name" type="text" class="form-control">
             </div>
-            <div class="col-3">
+
+        <div class="col-3">
             <div class="form-group">
                 <label>Fecha de lanzamiento</label>
                 <input name="date" type="number" class="form-control">
             </div>
         </div>
-          <div class="col-3">
+        
+        <div class="col-3">
             <div class="form-group">
                 <label>Color</label>
                 <input name="colour" type="text" class="form-control">
@@ -59,7 +62,9 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
                     <option value="5">5</option>
                 </select>
             </div>
+
         </div>
+    
     <button type="submit" class="btn btn-success">Enviar</button>
- </form><?php }
+</form><?php }
 }

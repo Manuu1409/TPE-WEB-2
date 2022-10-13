@@ -10,6 +10,7 @@
       
     </tr>
   </thead>
+  
   <tbody>
   {foreach from=$cars item=$car}
 
@@ -24,3 +25,5 @@
 </table>
 
 <p class="mt-3"><b>Mostrando {$count} autos</b></p>
+
+{include file="footer.tpl"}

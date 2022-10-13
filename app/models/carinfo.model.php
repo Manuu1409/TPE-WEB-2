@@ -1,4 +1,4 @@
-  <?php
+<?php
 
   class CarsModel {
 
@@ -6,6 +6,7 @@
 
     public function __construct() {
     $this->db = new PDO('mysql:host=localhost;'.'dbname=db_ford;charset=utf8', 'root', '');
+
   }
 
   public function getCars () {
@@ -21,7 +22,7 @@
 
   public function getCategories(){
 
-    $query = $this->db->prepare("SELECT * FROM categorias");
+    $query = $this->db->prepare("SELECT * FROM categorias");  // lo mismo pero en tabla categorias
     $query->execute();
 
     $categories = $query->fetchAll(PDO::FETCH_OBJ);
@@ -39,4 +40,4 @@
 
   }
   
- }
+}

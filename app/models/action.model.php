@@ -23,6 +23,8 @@ class actionModel {
 
     }
 
+    // <-------------------------------------------------------------------------------------------------------> //
+
     public function insertCar($name, $date, $colour, $priority, $category) {
       $query = $this->db->prepare("INSERT INTO `autos` (`id`, `nombre`, `fecha`, `color`, `prioridad`, `id_categoria_fk`) VALUES (?, ? , ?, ?, ?, ?);");
       $query->execute([NULL, $name, $date, $colour, $priority, $category]);
@@ -42,5 +44,5 @@ class actionModel {
       $query->execute([$id]);
 
     }
-    
+
 }

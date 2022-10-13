@@ -28,17 +28,19 @@ class CarController {
         $categoria = $this->model->getCategories();
         $this->view->showCategory($categoria);
         
-
     }
 
     public function showFormCategory() {
         $this->view->showFormCategory();
+        
     } 
 
     public function editFormCategory ($id) {
         $this->view->showEditFormCategory($id);
 
     }
+
+   // <-------------------------------------------------------------------------------------------------------> //
 
     public function showCars() {
         $autos = $this->model->getCars();

@@ -22,52 +22,51 @@ $actionController = new actionController();
 switch ($params[0]) {
     case 'login':
         $userController->showFormLogin();  // muestra el form login
-        break;
+    break;
     case 'validate':
         $userController->validateUser();
-        break;
+    break;
     case 'logout':
         $userController->logout();
-        break;
+    break;
     case 'inicio':
         $CarController->showCategoryList();   //aca va las categorias en el home
-        break;
+    break;
     case 'lista':
         $CarController->Sortbyid($params[1]);  // al hacer click en categorias me muestra la lista de autos
-        break;
+    break;
     case 'tablaAutos':
         $CarController->showCars();   //aca me muestra la tabla 
-        break;
+    break;
     case 'agregarcategoria':
         $actionController->addCategory();   // me añade una categoria
-        break;
-     case 'tablaCategoria':
+    break;
+    case 'tablaCategoria':
         $CarController->showFormCategory();   //me muestra el form categoria
-        break;
+    break;
     case 'agregarauto':
         $actionController->addCar();
     case 'editarcategoria':
         $actionController->editCategory($params[1]);   //accion que edita categoria
-        break;
-     case 'categoria':
+    break;
+    case 'categoria':
         $CarController->editFormCategory($params[1]);   // me lleva el form de categoria para editar
-            break;
+    break;
     case 'editarauto':
-            $actionController->editCar($params[1]);   //accion edita auto
-        break;
+        $actionController->editCar($params[1]);   //accion edita auto
+    break;
     case 'auto':
-            $CarController->editFormCar($params[1]);   // me lleva al form auto
-        break;
+        $CarController->editFormCar($params[1]);   // me lleva al form auto
+    break;
        // case 'borrarcategoria':
           //  $id = $params[1];
           //  $CarController->deleteCategorybyid($id);   
           //  break;
     case 'borrarauto':
-           $id = $params[1];  // obtengo el parametro de la acción
-           $actionController->deleteCar($id);   //me borra el auto
+        $id = $params[1];  // obtengo el parametro de la acción
+        $actionController->deleteCar($id);   //me borra el auto
         break;
-
         default:
         echo('404 Page not found');
-        break;
+    break;
 }
