@@ -15,12 +15,12 @@
         <nav class="navbar" style="background-color: #e3f2fd;>
             <div class="container-fluid">
               <a class="btn btn-info" aria-current="page" href="inicio">Home</a>
-              <a class="nav-link" aria-current="page" href="tablaAutos">Tabla autos</a>
-              <a class="btn btn-success" aria-current="page"  href="tablaCategoria">Tabla categoria</a>
+              <a type="button" class="btn btn-secondary" href="tablaAutos">Tabla autos</a>
+              <a type="button" class="btn btn-secondary"  href="tablaCategoria">Tabla categoria</a>
               {if (!isset($smarty.session.IS_LOGGED))}  {* si no esta logueado *}.
-              <a class="nav-link" aria-current="page" href="login">Log in</a>
+              <a type="button" class="btn btn-success" href="login">Log in</a>
               {else}
-                <a class="nav-link" aria-current="page" href="logout">Logout</a>
+                <a type="button" class="btn btn-danger" href="logout">Logout</a>
                 
               {/if}
               

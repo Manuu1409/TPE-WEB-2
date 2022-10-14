@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 22:36:52
+/* Smarty version 4.2.1, created on 2022-10-14 23:39:52
   from 'C:\xampp\htdocs\TPE_WEB_2\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634876e4067849_70697207',
+  'unifunc' => 'content_6349d7285a4584_72156958',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1e67bc89aa34889076efd00b724fff6a24276fc9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE_WEB_2\\templates\\header.tpl',
-      1 => 1665693406,
+      1 => 1665783589,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_634876e4067849_70697207 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6349d7285a4584_72156958 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,12 +39,12 @@ function content_634876e4067849_70697207 (Smarty_Internal_Template $_smarty_tpl)
         <nav class="navbar" style="background-color: #e3f2fd;>
             <div class="container-fluid">
               <a class="btn btn-info" aria-current="page" href="inicio">Home</a>
-              <a class="nav-link" aria-current="page" href="tablaAutos">Tabla autos</a>
-              <a class="btn btn-success" aria-current="page"  href="tablaCategoria">Tabla categoria</a>
+              <a type="button" class="btn btn-secondary" href="tablaAutos">Tabla autos</a>
+              <a type="button" class="btn btn-secondary"  href="tablaCategoria">Tabla categoria</a>
               <?php if ((!(isset($_SESSION['IS_LOGGED'])))) {?>  .
-              <a class="nav-link" aria-current="page" href="login">Log in</a>
+              <a type="button" class="btn btn-success" href="login">Log in</a>
               <?php } else { ?>
-                <a class="nav-link" aria-current="page" href="logout">Logout</a>
+                <a type="button" class="btn btn-danger" href="logout">Logout</a>
                 
               <?php }?>
               

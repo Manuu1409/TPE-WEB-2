@@ -12,8 +12,6 @@ class CarController {
     public function __construct() {
         $this->model = new CarsModel();
         $this->view = new CarsView();
-
-        // barrera de seguridad
     
     }
 
@@ -39,7 +37,7 @@ class CarController {
 
     }
 
-   // <------------------------------------------------------------------------------------------------------->  cascade me elima categoria y todos los items y restric no//  
+   // <-------------------------------------------------------------------------------------------------------> //  
 
     public function showCars() {
         $autos = $this->model->getCars();
@@ -60,3 +58,6 @@ class CarController {
     }
     
 }
+
+
+//cascade me elima categoria y todos los items y restric no

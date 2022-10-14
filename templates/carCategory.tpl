@@ -11,7 +11,7 @@
      <a  type="button" class="btn btn-success" href="lista/{$categoria->id}">Ver mas</a>
      {if (isset($smarty.session.IS_LOGGED))}
      <a  type='button' class="btn btn-warning" href="categoria/{$categoria->id}">Editar</a>
-     <a  class="btn btn-info" aria-current="page" href="borrarcategoria/{$categoria->id}">Borrar</a>
+     <a  type="button" class="btn btn-danger" href="borrarcategoria/{$categoria->id}">Borrar</a>
      {{/if}}
    </div>
  {/foreach}

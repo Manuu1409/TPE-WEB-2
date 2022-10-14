@@ -58,15 +58,15 @@ switch ($params[0]) {
     case 'auto':
         $CarController->editFormCar($params[1]);   // me lleva al form auto
     break;
-        case 'borrarcategoria':
-            $id = $params[1];
-            $actionController->deleteCategoryById($id);
-            break;
+    case 'borrarcategoria':
+        $id = $params[1];
+        $actionController->deleteCategoryById($id);
+    break;
     case 'borrarauto':
         $id = $params[1];  // obtengo el parametro de la acción
         $actionController->deleteCar($id);   //me borra el auto
-        break;
-        default:
+    break;
+    default:
         echo('404 Page not found');
     break;
 }

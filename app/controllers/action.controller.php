@@ -7,8 +7,8 @@ class actionController {
     private $authHelper;
 
     public function __construct() {
-        $this->model = new actionModel();
-        $this->authHelper = new AuthHelper();
+      $this->model = new actionModel();
+      $this->authHelper = new AuthHelper();
     }
 
     public function addCategory () {
@@ -25,7 +25,7 @@ class actionController {
     }
 
     public function editCategory ($id) {
-      $this->authHelper->checkLoggedIn();   //
+      $this->authHelper->checkLoggedIn();   
 
       $name = $_POST['name'];   // validar entrada de datos
       $description = $_POST['description'];
