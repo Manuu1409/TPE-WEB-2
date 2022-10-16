@@ -6,8 +6,8 @@
  {foreach from=$categorias item=$categoria}
   
    <div class="card-body">
-     <h3 class="card-title">{$categoria->nombre}</h3>
-     <p class="text-center">{$categoria->descripcion}</p>
+     <h3 class="text-dark">{$categoria->nombre}</h3>
+     <p class="text-secondary">{$categoria->descripcion}</p>
      <a  type="button" class="btn btn-success" href="lista/{$categoria->id}">Ver mas</a>
      {if (isset($smarty.session.IS_LOGGED))}
      <a  type='button' class="btn btn-warning" href="categoria/{$categoria->id}">Editar</a>

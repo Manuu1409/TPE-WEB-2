@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-14 23:39:52
+/* Smarty version 4.2.1, created on 2022-10-16 20:33:12
   from 'C:\xampp\htdocs\TPE_WEB_2\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6349d7285a4584_72156958',
+  'unifunc' => 'content_634c4e68c4c7a6_01094900',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1e67bc89aa34889076efd00b724fff6a24276fc9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE_WEB_2\\templates\\header.tpl',
-      1 => 1665783589,
+      1 => 1665945095,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6349d7285a4584_72156958 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634c4e68c4c7a6_01094900 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,11 +47,6 @@ function content_6349d7285a4584_72156958 (Smarty_Internal_Template $_smarty_tpl)
                 <a type="button" class="btn btn-danger" href="logout">Logout</a>
                 
               <?php }?>
-              
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   
                 </ul>

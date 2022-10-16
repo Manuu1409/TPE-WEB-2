@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-13 22:41:59
+/* Smarty version 4.2.1, created on 2022-10-16 20:15:02
   from 'C:\xampp\htdocs\TPE_WEB_2\templates\carList.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634878176a9161_30801811',
+  'unifunc' => 'content_634c4a26d61ad1_49444147',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4234555ffab4bd3197639bdd384f0680e1d7b712' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE_WEB_2\\templates\\carList.tpl',
-      1 => 1665693716,
+      1 => 1665944068,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:form_cars.tpl' => 1,
   ),
 ),false)) {
-function content_634878176a9161_30801811 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634c4a26d61ad1_49444147 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -48,7 +48,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['car']->value) {
 $_smarty_tpl->tpl_vars['car']->do_else = false;
 ?>
      <tr>
-       <td><?php echo $_smarty_tpl->tpl_vars['car']->value->nombre;?>
+       <td ><?php echo $_smarty_tpl->tpl_vars['car']->value->nombre;?>
 </td>
        <td><?php echo $_smarty_tpl->tpl_vars['car']->value->fecha;?>
 </td>

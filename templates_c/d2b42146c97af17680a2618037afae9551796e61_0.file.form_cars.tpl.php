@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-12 20:43:31
+/* Smarty version 4.2.1, created on 2022-10-16 20:23:27
   from 'C:\xampp\htdocs\TPE_WEB_2\templates\form_cars.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63470ad3bd0a96_06852078',
+  'unifunc' => 'content_634c4c1f111393_32366152',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd2b42146c97af17680a2618037afae9551796e61' => 
     array (
       0 => 'C:\\xampp\\htdocs\\TPE_WEB_2\\templates\\form_cars.tpl',
-      1 => 1665600208,
+      1 => 1665944605,
       2 => 'file',
     ),
   ),
@@ -20,34 +20,34 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63470ad3bd0a96_06852078 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634c4c1f111393_32366152 (Smarty_Internal_Template $_smarty_tpl) {
 ?> <h1>Tabla de autos </h1>
         
 <!-- formulario de alta de tarea -->
-<form action="agregarauto" method="POST" class="my-4">
+<form action="agregarauto" method="POST"  class="my-4">
     <div class="row">
         <div class="col-3">
             <div class="form-group">
                 <label>Nombre del auto</label>
-                <input name="name" type="text" class="form-control">
+                <input name="name" type="text" class="form-control" required>
             </div>
             <div class="col-3">
             <div class="form-group">
                 <label>Fecha de lanzamiento</label>
-                <input name="date" type="number" class="form-control">
+                <input name="date" type="number" class="form-control" required>
             </div>
         </div>
           <div class="col-3">
             <div class="form-group">
                 <label>Color</label>
-                <input name="colour" type="text" class="form-control">
+                <input name="colour" type="text" class="form-control" required>
             </div>
         </div>
 
         <div class="col-3">
             <div class="form-group">
                 <label>Prioridad</label>
-                <select name="priority" class="form-control">
+                <select name="priority" class="form-control" required>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>

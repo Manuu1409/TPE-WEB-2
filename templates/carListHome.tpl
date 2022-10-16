@@ -14,8 +14,8 @@
   <tbody>
   {foreach from=$cars item=$car}
 
-    <tr>
-      <td>{$car->nombre}</td>
+    <tr class="p-3 mb-2 bg-secondary text-white">
+      <td >{$car->nombre}</td>
       <td>{$car->fecha}</td>
       <td>{$car->color}</td>
     </tr>

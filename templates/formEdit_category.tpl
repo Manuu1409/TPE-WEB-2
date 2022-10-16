@@ -7,11 +7,11 @@
         <div class="col-3">
             <div class="form-group">
                 <label> Nombre categoria</label>
-                <input name="name" type="text" class="form-control">
+                <input name="name" type="text" class="form-control" required>
             </div>
             <div>
                 <label>Descripcion</label>
-                <input name="description" type="text" class="form-control">
+                <input name="description" type="text" class="form-control" required>
             </div>
         </div>
     </div>
