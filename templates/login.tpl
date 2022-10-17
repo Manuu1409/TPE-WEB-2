@@ -1,7 +1,7 @@
 {include 'header.tpl'}
 
 <div class="mt-5 w-25 mx-auto">
-    <form method="POST" action="validate">
+    <form method="POST" action="validar">
         <div class="form-group">
             <label for="email">Email</label>
             <input type="email" required class="form-control" id="email" name="email" aria-describedby="emailHelp">

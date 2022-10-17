@@ -23,11 +23,11 @@ switch ($params[0]) {
     case 'login':
         $userController->showFormLogin();  // muestra el form login
     break;
-    case 'validate':
-        $userController->validateUser();
+    case 'validar':
+        $userController->validateUser();   //validar usuario
     break;
     case 'logout':
-        $userController->logout();
+        $userController->logout();      // cierra sesion
     break;
     case 'inicio':
         $CarController->showCategoryList();   //aca va las categorias en el home
@@ -45,7 +45,7 @@ switch ($params[0]) {
         $CarController->showFormCategory();   //me muestra el form categoria
     break;
     case 'agregarauto':
-        $actionController->addCar();
+        $actionController->addCar();    //accion añade auto
     case 'editarcategoria':
         $actionController->editCategory($params[1]);   //accion que edita categoria
     break;
@@ -58,7 +58,7 @@ switch ($params[0]) {
     case 'auto':
         $CarController->editFormCar($params[1]);   // me lleva al form auto
     break;
-    case 'borrarcategoria':
+    case 'borrarcategoria':  //me borra la categoria completo con los items , esta en cascade
         $id = $params[1];
         $actionController->deleteCategoryById($id);
     break;
